@@ -1,0 +1,729 @@
+@charset 'utf-8';
+
+@import "_reset";
+@import "_variables";
+
+body {
+    .mainVisual {
+        background-image: url('../images/mainVisual_sp.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        aspect-ratio: 390 / 450;
+        @include mq($pc) {
+            background-image: url('../images/mainVisual_pc.png');
+            background-size: cover;
+            aspect-ratio: 1500 / 720;
+        }
+        &__container {
+            margin: 0 auto;
+            @include mq($pc) {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+        &__title {
+            margin: 0 auto;
+            font-family: Marcellus;
+            font-weight: normal;
+            font-size: 1.5rem;
+            letter-spacing: 0.2em;
+            text-align: center;
+            color: #000;
+            padding-top: 5.3vw;
+            @include mq($pc) {
+                font-size: 1.875rem;
+                padding-top: 1.8vw;
+                letter-spacing: 0.15em;
+            }
+        }
+        &__productName {
+            margin: 0 auto;
+            font-family: Marcellus;
+            font-weight: normal;
+            font-size: 2.5625rem;
+            letter-spacing: 0.3em;
+            color: #000;
+            padding-left: 5.6vw;
+            line-height: 12vw;
+            padding-top: 93.8vw;
+            @include mq($pc) {
+                max-width: 1200px;
+                font-size: 3.125rem;
+                line-height: 3.9688rem;
+                padding-top: 13.4vw;
+                padding-left: 4.7vw;
+            }
+        }
+        &__productName-serif {
+            width: 74.8vw;
+            padding-top: 0.7vw;
+            padding-left: 0.2vw;
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 1.25rem;
+            letter-spacing: 0.3em;
+            color: #000;
+            @include mq($pc) {
+                max-width: 1200px;
+                font-size: 1.5625rem;
+                padding-top: 0;
+            }
+        }
+    }
+
+    .purchase {
+        text-align: center;
+        margin: 0 auto;
+        @include mq($pc) {
+            display: flex;
+            text-align: left;
+        }
+        &__container { 
+            width: 91.7vw;
+            background-color: #F0F4FF;
+            margin: 10.7vw auto 13.8vw;
+            padding: 5.1vw 7.6vw 2.7vw;
+            @include mq($pc) {
+                max-width: 1000px;
+                display: flex;
+                justify-content: center;
+                margin: 3.2vw auto;
+                padding: 5px;
+                flex-wrap: wrap;
+            }
+        }
+        &__contents {
+            @include mq($pc) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            }
+        }
+        &__title {
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1.125rem;
+            letter-spacing: 0.1em;
+            color: #111;
+            white-space: nowrap;
+            @include mq($pc) {
+                font-family: "Noto Serif JP";
+                font-size: 1.5rem;
+                text-align: left;
+                padding-left: 1.0625rem;
+
+            }
+        }
+        &__price {
+            font-family: "Noto Serif JP";
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            color: #111;
+            padding-top: 0.4375rem;
+            @include mq($pc) {
+                font-size: 1rem;
+                padding-left: 1.0625rem;
+                padding-top: 0.625rem;
+            }
+        }
+        &__list {
+            @include mq($pc) {
+                width: 47vw;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                column-gap: 2vw;
+                padding: 2.7vw 1vw;
+            }
+        }
+        &__item {
+            display: flex;
+            width: 76.9vw;
+            height: 14.6vw;
+            border-radius: 7.4vw;
+            margin: 5.6vw auto;
+            justify-content: center;
+            align-items: center;
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #fff;
+            white-space: nowrap;
+            align-items: center;
+            cursor: pointer;
+            @include mq($pc) {
+                width: 20vw;
+                height: 3.8vw;
+                margin: 0;
+            }
+            @include middle($pc, $md) {
+                font-size: 0.85rem;
+            }
+        }  
+        & .-blue {
+            background-color: #46C4DB;
+        }  
+        & .-green {
+            background-color: #5DD5AB;
+        }  
+    }
+
+    .product {
+        background-image: url(../images/product.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        aspect-ratio: 390 / 680;
+        @include mq($pc) {
+            position: relative;
+            background-image: url(../images/product_pc.png);
+            aspect-ratio: 1500 / 550;
+        }
+        &__container {
+            width: 91.7vw;
+            margin: 0 auto;
+            @include mq($pc) {
+                display: flex;
+                flex-direction: column;
+                width: 44.6vw;
+                margin: 0 0.1vw 0 auto;
+                padding-top: 8.7vw;
+            }
+        }
+        &__title {
+            font-family: "EB Garamond";
+            font-weight: bold;
+            font-size: 1.875rem;
+            line-height: 1.875rem;
+            text-align: center;
+            color: #fff;
+            padding-top: 13.5vw;
+            @include mq($pc) {
+                font-size: 2.375rem;
+                line-height: 2.375rem;
+                text-align: left;
+                color: #fff;
+                padding-top: 0;
+                
+            }
+            @include middle($pc, $md) {
+                font-size: 1.5rem;
+            }
+        }
+        &__titleSerif {
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            color: #fff;
+            padding-top: 4.8vw;
+            @include mq($pc) {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                text-align: left;
+                color: #fff;
+                padding-top: 1.3vw;   
+            }
+            @include middle($pc, $md) {
+                font-size: 1.2rem;
+            }
+            
+        }
+        &__text {
+            margin: 0 auto;
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.875rem;
+            line-height: 2rem;
+            text-align: left;
+            color: #fff;
+            text-shadow: 0px 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
+            padding-top: 4.8vw;
+            @include mq($pc) {
+                width: 28.1vw;
+                margin: 0;
+                padding-top: 1.6vw; 
+            }
+            @include middle($pc, $md) {
+                width: 37vw;
+                font-size: 0.7rem;
+                line-height: 1.5rem;
+            }
+            
+        }
+    }
+
+    .voice {
+        margin: 0 auto;
+        padding-bottom: 9.2vw;
+        @include mq($pc) {
+            padding-bottom: 5.2vw;
+        }
+        &__title {
+            font-family: "EB Garamond";
+            font-weight: bold;
+            font-size: 1.875rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 13.3vw;            
+            @include mq($pc) {
+                font-size: 2.8125rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 6.2vw;
+            }
+        }
+        &__titleSerif {
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 0.3vw;
+            @include mq($pc) {
+                font-size: 1.25rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 1.3vw;
+            }
+        }
+        .slick-container {
+            width: 72.5vw;
+            margin: 9.4vw auto;
+            @include mq($pc) {
+                width: 65.3vw;
+                margin: 2.2vw auto 2.2vw;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .slick-slide {
+            background-color: #DBF7F9;
+            width: 71.7vw;
+            margin: 0 auto;
+            @include mq($pc) {
+                width: 20vw;
+                padding-top: 1.3vw;
+                margin-right: 2.6vw;
+            }
+        }
+        .slick-slide.slick-initialized {
+            visibility: visible;
+        }
+        .slick-img {
+            margin: 6.6vw auto 0;
+            width: 20.5vw;
+            height: 20.5vw;
+            text-align: center;
+            margin-left: 27.1vw;
+            @include mq($pc) {
+                margin: 1.7vw auto 0;
+                width: 6.6vw;
+                height: 6.6vw;
+            }
+        }
+        .slick-name {
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-left: 1vw;
+            @include mq($pc) {
+                font-size: 0.9375rem;
+                padding-left: 0;
+                padding-top: 0.2vw;                
+            }
+            
+        }
+        .slick-text {
+            width: 64.1vw;
+            margin: 2.5vw auto 6.6vw;
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.875rem;
+            line-height: 1.75rem;
+            text-align: left;
+            color: #000;
+            @include mq($pc) {
+                width: 17.8vw;
+                font-size: 1rem;
+                margin: 0.8vw auto 2.5vw;  
+            }
+            
+        }
+        // 装飾
+        .slide{
+            opacity: 0;
+            transition: opacity .3s linear;
+        }
+        .slide.slick-initialized{
+            opacity: 1;
+        }
+        /* スライダー同士のmargin */
+        .slick-container .slick-slide{
+            @include mq($pc) {
+                margin: -0.2vw 2vw 0 0.5vw;
+                padding-bottom: 0;
+            }
+        }
+        /* ここから矢印カスタマイズ */
+        .slick-container .slick-arrow {
+            position: absolute;
+            top: 45%;
+            @include mq($pc) {
+                top: 51%;
+                transition: all  0.5s;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+        }
+        .slick-container .slick-arrow:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .slick-container .prev-arrow {
+            left: -9.2vw;
+            @include mq($pc) {
+                left: -6vw;
+            }
+        }
+        .slick-container .next-arrow {
+            right: -9.7vw;
+            @include mq($pc) {
+                right: -5.8vw;
+            }
+        }
+        .slick-container .prev-arrow:before,
+        .slick-container .next-arrow:before{
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            color: #00AFBF;
+            font-size: 1.9375rem;
+            @include mq($pc) {
+                font-size: 2.9375rem;
+            }
+        }
+        .slick-container .prev-arrow:before{
+            content: "\f0a8";
+        }
+        .slick-container .next-arrow:before{
+            content: "\f0a9";
+        }
+        .slick-dots {
+            bottom: -7.6vw;
+            @include mq($pc) {
+            bottom: -2.8vw;
+            }
+        }
+        .slick-dots li {
+            width: 4.3vw;
+            margin: 0;
+            @include mq($pc) {
+                width: 1.3vw;
+            }
+        }
+        .slick-dots li button:before{
+            font-size:0.6375rem!important;
+            @include mq($pc) {
+                font-size: 0.6875rem!important;
+            }
+        }
+
+    }
+
+    .faq {
+        margin: 0 auto;
+        padding-bottom: 3vw;
+        background: linear-gradient(#f4ffe8 0%, #c6f0fe 100%);
+        @include mq($pc) {
+            padding-bottom: 0.6vw;
+        }
+        &__title {
+            font-family: "EB Garamond";
+            font-weight: bold;
+            font-size: 1.875rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 9vw;            
+            @include mq($pc) {
+                font-size: 2.8125rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 3.5vw;
+            }
+        }
+        &__titleSerif {
+            font-family: "Noto Serif JP";
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: center;
+            color: #000;
+            padding-top: 0.5vw;
+            @include mq($pc) {
+                font-size: 1.25rem;
+                letter-spacing: 0.05em;
+                line-height: 2rem;
+                text-align: center;
+                color: #000;
+                padding-top: 1.3vw;
+            }
+        }
+        &__container {
+            width: 91.7vw;
+            margin: 8.9vw auto;
+            @include mq($pc) {
+                width: 40vw;
+                margin: 0 auto;
+                padding-top: 2.6vw;
+                padding-bottom: 0.4vw;
+            }
+        }
+        &__list {
+            background-color: #ffffff;
+            font-family: "Noto Serif JP";
+            font-weight: 500;
+            font-size: 0.9375rem;
+            line-height: 1.75rem;
+            text-align: left;
+            color: #444;
+            margin: 0 auto 5.3vw;
+            padding-bottom: 0.5vw;
+            @include mq($pc) {
+                margin-bottom: 1.4vw;
+            }
+        }
+        &__question::before {
+            content: "Q.";
+            font-family: "EB Garamond";
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            line-height: 2rem;
+            text-align: left;
+            color: #444;
+            padding-right: 4.3vw;
+            @include mq($pc) {
+                padding-right:1vw ;
+            }
+        }
+        &__question {
+            width: 83.3vw;
+            margin: 0 auto;
+            display: flex;
+            padding-top: 4.3vw;
+            padding-bottom: 3.3vw;
+            position: relative;
+            @include mq($pc) {
+                width: 36.7vw;
+                padding-top: 1.4vw;
+                padding-bottom: 0.9vw;
+            }
+        }
+        &__question p {
+            @include mq($pc) {
+                width: 30.6vw;
+            }
+        }
+        &__question::after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0d7';
+            font-weight: 900;
+            position:absolute;
+            top: 22%;
+            right: 0;
+            @include mq($pc) {
+                top: 36%;
+                right: 0.1vw;
+                font-size: 1.25rem;
+            }
+        }
+        &__question.active::after {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0d8';
+            font-weight: 900;
+            position:absolute;
+            top: 22%;
+            right: 0;
+            @include mq($pc) {
+                top: 36%;
+
+            }
+        }
+        &__answer::before {
+            content: "A.";
+            font-family: "EB Garamond";
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 2rem;
+            text-align: left;
+            color: #444;
+            padding-right: 6.1vw;
+            @include mq($pc) {
+                padding-right: 1.8vw;
+            }
+        }
+        &__answer {
+            display: flex;
+            width: 83.3vw;
+            margin: 0 auto;
+            font-family: "Noto Serif JP";
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: -0.06em;
+            line-height: 1.75rem;
+            text-align: left;
+            color: #000;
+            padding-bottom: 7vw;
+            @include mq($pc) {
+                width: 36.7vw;
+                padding-top: 0.1vw;
+                padding-bottom: 1vw;
+            }
+        }
+    }
+
+    .footer {
+        background-color: #0071CE;
+        aspect-ratio: 390 /165;
+        position: relative;
+        @include mq($pc) {
+            aspect-ratio: 1500 / 104;
+        }
+        &__container {
+            @include mq($pc) {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                padding-top: 1.7vw;
+            }
+        }
+        &__title  {
+            font-family: Marcellus;
+            font-weight: normal;
+            font-size: 1.75rem;
+            letter-spacing: 0.2em;
+            color: #fff;
+            text-align: center;
+            padding-top: 5vw;
+            @include mq($pc) {
+                width: 29.8vw;
+                font-family: Marcellus;
+                font-weight: normal;
+                font-size: 2rem;
+                letter-spacing: 0.2em;
+                text-align: center;
+                color: #fff;
+                padding-top: 0.1vw; 
+            }
+            @include middle($pc, $md) {
+                width: 43vw;
+            }
+        }
+        &__nav {
+            width: 76.5vw;
+            margin: 0 auto;
+            @include mq($pc) {
+                margin: 0;
+            }
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 6.1vw;
+            @include mq($pc) {
+                width: 22.9vw;
+                padding-top: 0;
+                line-height: 3.5em;
+                margin: 0 12vw;
+            }
+            @include middle($pc, $md) {
+                margin: 0;
+                width: 40vw;
+            }
+        }
+        &__item {
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.75rem;
+            text-align: left;
+            color: #fff;
+            cursor: pointer;
+            @include mq($pc) {
+                font-family: "Noto Serif JP";
+                font-weight: normal;
+                font-size: 0.875rem;
+                text-align: center;
+                color: #fff;
+                
+                
+            }
+        }
+        &__copyright {
+            font-family: "Noto Serif JP";
+            font-weight: normal;
+            font-size: 0.6875rem;
+            text-align: center;
+            color: #fff;
+            padding-top:7.4vw;
+            @include mq($pc) {
+                font-family: "Noto Serif JP";
+                font-weight: normal;
+                font-size: 0.75rem;
+                text-align: center;
+                color: #fff;   
+                padding-top: 1.5vw;
+                width: 40.1vw;  
+            }
+        }
+        &__toTop {
+            position: absolute;
+            top: -10vw;
+            right: 4.1vw;
+            background-color: #0071CE;
+            width: 10.2vw;
+            height: 10.2vw;
+            @include mq($pc) {
+                top: -2.6vw;
+                right: 10vw;;
+                width: 2.7vw;
+                height:2.6vw;
+            }
+        }
+        .fa-arrow-up {
+            position: absolute;
+            color: #ffffff;
+            width: 3.5vw;
+            height: 4.1vw;
+            top: 2.5vw;
+            left: 3.3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mq($pc) {
+                width: 1.5vw;
+                height: 0.3vw;
+                top: 1.1vw;
+                left: 0.6vw;
+            }
+        }
+
+    } 
+}
+
